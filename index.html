@@ -1,0 +1,24 @@
+today = new Date();
+      h = today.getHours();
+      Min = today.getMinutes();
+      var sh = String(h);
+      var sMin = String(Min);
+      if (sMin.length == 1){
+        sMin = "0" + sMin;
+      }
+      var shMin = sh + sMin;
+      var hmin = Number(shMin);
+      var items = [728,813,858,943,1028,1115,1200,1245,1330,1415,1500,1545,1630,1715,1800,1845,1930];
+      for (let i = 0; i < items.length; i++){
+        zikoku = items[i];
+        if(zikoku > hmin){
+          for (let a = i; a < i+3; a++){
+            var res = items[a];
+            var res = res.toString();
+            var result1 = res.substring(0,2);
+            var result2 = res.substring(2,4);
+            document.write(result1 + ":" + result2 + "\n");
+          }
+          break;
+        }
+        }
